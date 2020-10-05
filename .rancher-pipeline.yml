@@ -1,0 +1,13 @@
+stages:
+  - name: Build image
+    steps:
+      - publishImageConfig:
+          dockerfilePath: ./Dockerfile
+          buildContext: .
+          pushRemote: true
+          registry: index.docker.io
+
+  - name: Deploy
+    steps:
+      - applyYamlConfig:
+          path: ./kubernetes.yaml
