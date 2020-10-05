@@ -1,0 +1,33 @@
+## apiVersion: serving.knative.dev/v1
+##kind: Service
+##metadata:
+  #name: startup-act
+ # namespace: default
+#spec:
+#  template:
+ #   spec:
+  #    containers:
+   #     - image: gcr.io/creometry/demo-app@sha256:503b34a9abe5eea14cbe35de91c9e2b9f082f8a4a35822f170a7ade277c2ff3a
+apiVersion: v1
+kind: List
+items:
+  - apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: api-deployment
+      labels:
+        app: api
+    spec:
+      replicas: 1
+      selector:
+        matchLabels:
+          app: api
+      template:
+        metadata:
+          labels:
+            app: api
+        spec:
+          containers:
+            - name: api
+              image: pan0ptics/demo-app
+          
