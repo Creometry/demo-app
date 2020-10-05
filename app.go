@@ -8,7 +8,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	log.Print("Hello Startup Act College!!! this is creometry!")
+	log.Print("Hello Startup Act College! this is creometry!")
 	msg := "Hello startup act college!!! this is creometry!"
 	fmt.Fprintf(w, "<h1>%s</h1>", msg)
 }
