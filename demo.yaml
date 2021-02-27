@@ -1,0 +1,16 @@
+apiVersion: serving.knative.dev/v1 # Current version of Knative
+kind: Service
+metadata:
+  name: hello # The name of the app
+  namespace: test # The namespace the app will use
+  annotations:
+    # the Service FQDN will become hello-world.{default-domain}
+  #  custom-hostname: hello
+spec:
+  template:
+    spec:
+      containers:
+        - image: gcr.io/knative-samples/helloworld-go # Reference to the image of the app
+          env:
+            - name: TARGET # The environment variable printed out by the sample app
+              value: "hello Creometrist! I am an app running in a cluster in Frankfurt"
