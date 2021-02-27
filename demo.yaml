@@ -13,4 +13,4 @@ spec:
         - image: gcr.io/knative-samples/helloworld-go # Reference to the image of the app
           env:
             - name: TARGET # The environment variable printed out by the sample app
-              value: "hello Creometrist! I am an app running in a cluster in Frankfurt"
+              value: " wazzuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuup from Mars"
