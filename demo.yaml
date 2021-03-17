@@ -6,10 +6,8 @@ metadata:
     # the Service FQDN will become hello-world.{default-domain}
   #  custom-hostname: hello
 spec:
-  template:
-    spec:
-      containers:
-        - image: gcr.io/knative-samples/helloworld-go # Reference to the image of the app
-          env:
-            - name: TARGET # The environment variable printed out by the sample app
-              value: " wazzuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuup from Mars"
+  containers:
+  - image: gcr.io/knative-samples/helloworld-go # Reference to the image of the app
+    env:
+    - name: TARGET # The environment variable printed out by the sample app
+      value: " wazzuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuup from Mars"
